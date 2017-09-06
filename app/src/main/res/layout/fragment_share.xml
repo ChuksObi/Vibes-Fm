@@ -1,16 +1,33 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/share_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chuks.vibefmbenin.ShareFragment"
-    android:id="@+id/share_fragment">
+    tools:context="com.example.chuks.vibefmbenin.ShareFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Share"
-        android:textAlignment="center"
-        android:textSize="25sp" />
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/facebook_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="facebook" />
+
+        <Button
+            android:id="@+id/twitter_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/twitter" />
+
+        <Button
+            android:id="@+id/instagram_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="instagram" />
+    </LinearLayout>
 
 </FrameLayout>

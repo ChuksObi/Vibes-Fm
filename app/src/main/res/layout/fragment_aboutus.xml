@@ -1,16 +1,165 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/about_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chuks.vibefmbenin.AboutUsFragment"
-    android:id="@+id/about_fragment">
+    tools:context="com.example.chuks.vibefmbenin.AboutUsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="AboutUs"
-        android:textAlignment="center"
-        android:textSize="25sp" />
+        android:background="#F8ECC2">
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/vibes_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/vibes_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vibes_text"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/your_hot_non_stop_hit_music_station_fresh_urban_contemporty_r_b_hip_hop_music_news_current_affairs"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/slogan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vibes_text2"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="the vibes slogan..."
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+
+        <ImageView
+            android:id="@+id/web_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/slogan"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/button_left"
+            android:padding="10dp"
+            android:src="@drawable/ic_mail" />
+
+        <TextView
+            android:id="@+id/button_web"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/slogan"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_toEndOf="@+id/mail_button"
+            android:layout_toRightOf="@+id/mail_button"
+            android:background="@drawable/button_right"
+            android:padding="10dp"
+            android:text="Website     "
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/mail_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/web_button"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/button_left"
+            android:padding="10dp"
+            android:src="@drawable/ic_mail" />
+
+        <TextView
+            android:id="@+id/button_mail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/button_web"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_toEndOf="@+id/mail_button"
+            android:layout_toRightOf="@+id/mail_button"
+            android:background="@drawable/button_right"
+            android:padding="10dp"
+            android:text="Mail     "
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/facebook_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/mail_button"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/button_left"
+            android:padding="10dp"
+            android:src="@drawable/ic_mail" />
+
+        <TextView
+            android:id="@+id/button_call"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/button_mail"
+            android:layout_marginRight="40dp"
+            android:layout_toEndOf="@+id/mail_button"
+            android:layout_toRightOf="@+id/mail_button"
+            android:background="@drawable/button_right"
+            android:padding="10dp"
+            android:text="Call     "
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+
+        <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/website"-->
+        <!--android:layout_below="@+id/slogan"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:text="Website"/>-->
+
+        <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/mail"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_below="@+id/website"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:text="Mail"/>-->
+
+
+        <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/facebook"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_below="@+id/mail"-->
+        <!--android:text="facebook"-->
+        <!--android:layout_centerInParent="true"/>-->
+
+
+    </RelativeLayout>
+
 
 </FrameLayout>

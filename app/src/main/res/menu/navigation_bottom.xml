@@ -3,22 +3,22 @@
 
 
         <item
-            android:title="@string/schedule"
             android:id="@+id/navbottom_schedule"
-            android:icon="@mipmap/ic_schedule_black_24dp">
+            android:icon="@mipmap/ic_schedule_black_24dp"
+            android:title="@string/schedule">
         </item>
 
         <item
-            android:title="@string/radio"
             android:id="@+id/navbottom_radio"
-            android:icon="@mipmap/ic_radio_black_24dp">
+            android:icon="@mipmap/ic_radio_black_24dp"
+            android:title="@string/live">
 
             </item>
 
         <item
-            android:title="@string/podcast"
             android:id="@+id/navbottom_podcast"
-            android:icon="@mipmap/ic_supervisor_account_black_24dp">
+            android:icon="@mipmap/ic_supervisor_account_black_24dp"
+            android:title="@string/podcast">
             </item>
 
 </menu>
