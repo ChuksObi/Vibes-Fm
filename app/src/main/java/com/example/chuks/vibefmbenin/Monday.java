@@ -12,6 +12,7 @@ import android.view.ViewGroup;
  */
 public class Monday extends Fragment {
 
+    View view;
 
     public Monday() {
         // Required empty public constructor
@@ -23,6 +24,13 @@ public class Monday extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_monday, container, false);
+
+//        View listItemView = view;
+//        if (listItemView == null){
+//            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+//        }
+
+      //  TextView magnitudeView = (TextView) view.findViewById(R.id.magnitude);
     }
 
 }

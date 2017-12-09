@@ -14,5 +14,13 @@
     <string name="podcast">Podcast</string>
     <string name="live">Live</string>
     <string name="your_hot_non_stop_hit_music_station_fresh_urban_contemporty_r_b_hip_hop_music_news_current_affairs"><![CDATA[Your Hot & Non-Stop hit music station. Fresh Urban contempory R&B/Hip-Hop music, news & current affairs.]]></string>
+    <string name="facebook_app_id">112783736073731</string>
+
+
+    <!-- Twitter Configurations -->
+    <string name="twitter_consumer_key">qwYqzK54jwt8fHbFfRdiUxbQj</string>
+    <string name="twitter_consumer_secret">j6shrA8dd2Cq2OfF8xIgw4ANAPVP0bQcYrOknl68bZ4jGhNhkc</string>
+    <!-- End Configurations -->
+
 
 </resources>

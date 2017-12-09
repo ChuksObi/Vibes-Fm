@@ -1,15 +1,15 @@
 package com.example.chuks.vibefmbenin;
 
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         private ActionBarDrawerToggle mToggle;
         private NavigationView mNavigationView;
         private Toolbar mToolBar;
+        String podID;
 
         //BottomNavigationView OnNavigationItemSelectedListener
         private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -77,10 +78,44 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         setupDrawerContent(mNavigationView);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        RadioFragment radioBottom = new RadioFragment();
+        FragmentManager radioManager = getSupportFragmentManager();
+        radioManager.beginTransaction().replace(R.id.frament_layout,radioBottom).commit();
+
+
+
+        //Moving Data to Subscribe Fragment
+        Bundle bundle = getIntent().getExtras();
+
+
+        if(bundle!= null){
+            if(bundle.getString("podID") != null){
+                //Moving to Subscribed fragment LOWKEY:)
+                podID = getIntent().getStringExtra("podID");
+
+
+
+
+                SubscribedFragment subscribedFragmentObject = new SubscribedFragment();
+                FragmentManager subscribeManager = getSupportFragmentManager();
+                subscribeManager.beginTransaction().replace(R.id.frament_layout,subscribedFragmentObject).commit();
+                setTitle("Subscribed");
+
+                Bundle bundleSend = new Bundle();
+                bundleSend.putString("podID",podID);
+                subscribedFragmentObject.setArguments(bundleSend);
+
+
+
+            }}
+
 
     }
 
@@ -141,6 +176,9 @@ public class MainActivity extends AppCompatActivity {
         // Set action bar title
         setTitle(menuItem.getTitle());
         mDrawerLayout.closeDrawers();
+
+
+
     }
 
     @Override

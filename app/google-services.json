@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "295130869914",
+    "firebase_url": "https://vibefmbenin-67cc5.firebaseio.com",
+    "project_id": "vibefmbenin-67cc5",
+    "storage_bucket": "vibefmbenin-67cc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295130869914:android:1689d8c0602eca3d",
+        "android_client_info": {
+          "package_name": "com.example.chuks.vibefmbenin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295130869914-3fanep770v9n3rsns6dk10d9d6mqa69g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chuks.vibefmbenin",
+            "certificate_hash": "7efb703d6f791590b6eace8076e91b59958bed81"
+          }
+        },
+        {
+          "client_id": "295130869914-6s3s91v4u7dapfisnh2drvkaueho62i8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASwR6qlaR1ZPTtg5Ud7G-wBbpbYLZfkTk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295130869914-6s3s91v4u7dapfisnh2drvkaueho62i8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

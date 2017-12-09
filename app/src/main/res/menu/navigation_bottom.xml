@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/navbottom_schedule"
+        android:icon="@mipmap/ic_schedule_black_24dp"
+        android:title="@string/schedule">
 
-        <item
-            android:id="@+id/navbottom_schedule"
-            android:icon="@mipmap/ic_schedule_black_24dp"
-            android:title="@string/schedule">
-        </item>
+    </item>
 
-        <item
-            android:id="@+id/navbottom_radio"
-            android:icon="@mipmap/ic_radio_black_24dp"
-            android:title="@string/live">
+    <item
+        android:id="@+id/navbottom_radio"
+        android:icon="@mipmap/play_logo"
+        android:title="@string/live">
+    </item>
 
-            </item>
+    <item
+        android:id="@+id/navbottom_podcast"
+        android:icon="@mipmap/podcast_logo"
+        android:title="@string/podcast">
 
-        <item
-            android:id="@+id/navbottom_podcast"
-            android:icon="@mipmap/ic_supervisor_account_black_24dp"
-            android:title="@string/podcast">
-            </item>
+    </item>
 
 </menu>

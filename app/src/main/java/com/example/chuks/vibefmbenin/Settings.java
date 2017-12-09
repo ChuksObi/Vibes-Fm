@@ -15,7 +15,7 @@ public class Settings {
     private String emailAddress = "obiichukwuma@gmail.com";
 
     //Phone no
-    private String phoneNo = "08133072164";
+    private String phoneNo = "07062198487";
 
     //Website Url
     private String websiteUrl = "http://vibesfm.com.ng";
@@ -78,5 +78,5 @@ public class Settings {
         this.playNotificationMessage = playNotificationMessage;
     }
 
-    //
+
 }

@@ -25,6 +25,18 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             case 2:
                 Wednesday tab3 = new Wednesday();
                 return tab3;
+            case 3:
+                Thursday tab4 = new Thursday();
+                return tab4;
+            case 4:
+                Friday tab5 = new Friday();
+                return tab5;
+            case 5:
+                Saturday tab6 = new Saturday();
+                return tab6;
+            case 6:
+                Sunday tab7 = new Sunday();
+                return tab7;
             default:
                 return null;
         }

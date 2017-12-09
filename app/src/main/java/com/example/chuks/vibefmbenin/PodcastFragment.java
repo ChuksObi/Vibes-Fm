@@ -2,7 +2,9 @@ package com.example.chuks.vibefmbenin;
 
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +12,8 @@ import android.view.ViewGroup;
 
 public class PodcastFragment extends Fragment {
 
-//    private RecyclerView mPodCastList;
+
+
 
     public PodcastFragment() {
         // Required empty public constructor
@@ -23,56 +26,44 @@ public class PodcastFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_podcast, container, false);
 
-//        mPodCastList = (RecyclerView) v.findViewById(R.id.podcastList);
-//        mPodCastList.hasFixedSize();
-//        mPodCastList.setLayoutManager(new LinearLayoutManager(getActivity()));
+        TabLayout tabLayout = (TabLayout) v.findViewById(R.id.pod_tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("Discover"));
+        tabLayout.addTab(tabLayout.newTab().setText("Subscribed"));
 
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        final ViewPager viewPager = (ViewPager) v.findViewById(R.id.pod_pager);
+        final PodPagerAdapter adapter = new PodPagerAdapter
+                (getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+//        View root = tabLayout.getChildAt(0);
+//        if (root instanceof LinearLayout) {
+//            ((LinearLayout) root).setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
+//            GradientDrawable drawable = new GradientDrawable();
+//            drawable.setColor(ResourcesCompat.getColor(getResources(), R.color.colorAccent, null));
+//            drawable.setSize(2, 1);
+//            ((LinearLayout) root).setDividerPadding(10);
+//            ((LinearLayout) root).setDividerDrawable(drawable);
+//    }
 
         return v;
-    }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//
-//        FirebaseRecyclerAdapter<Pod, BlogViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Pod, BlogViewHolder>(
-//
-//                Pod.class,
-//                R.layout.podcast_row,
-//                BlogViewHolder.class,
-//                mDatabase
-//        ) {
-//            @Override
-//            protected void populateViewHolder(BlogViewHolder viewHolder, Pod model, int position) {
-//
-//                viewHolder.setTitle(model.getTitle());
-//                viewHolder.setDescription(model.getDescription());
-//            }
-//        };
-//
-//        mPodCastList.setAdapter(firebaseRecyclerAdapter);
-//    }
-//
-//
-//    private static class BlogViewHolder extends RecyclerView.ViewHolder{
-//
-//        View mview;
-//
-//        public BlogViewHolder(View itemView) {
-//            super(itemView);
-//            mview = itemView;
-//        }
-//
-//        public void setTitle(String title){
-//
-//            TextView post_title = (TextView) mview.findViewById(R.id.pod_title);
-//            post_title.setText(title);
-//        }
-//
-//        public void setDescription(String description){
-//            TextView post_description = (TextView) mview.findViewById(R.id.pod_description);
-//            post_description.setText(description);
-//
-//        }
-//    }
-}
+}}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/display_view"
+            android:layout_width="7dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:background="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/pod_image_list"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/display_view"
+            android:background="@color/colorAccent"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/pod_title_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/pod_image_list"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pod_title_oap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pod_title_list"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/pod_image_list"
+            android:text=""
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/pod_list_image_time"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/pod_title_oap"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/pod_image_list"
+            android:background="@drawable/time" />
+
+        <TextView
+            android:id="@+id/pod_list_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pod_title_oap"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/pod_list_image_time"
+            android:text=""
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pod_list_calender"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/pod_image_list"
+            android:layout_toRightOf="@+id/pod_image_list" />
+
+        <ImageView
+            android:id="@+id/pod_list_calender"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/pod_title_oap"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/pod_list_duration"
+            android:background="@drawable/calendar" />
+
+        <TextView
+            android:id="@+id/pod_list_calender_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pod_title_oap"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/pod_list_calender"
+            android:text=""
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/download_pod"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/download" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

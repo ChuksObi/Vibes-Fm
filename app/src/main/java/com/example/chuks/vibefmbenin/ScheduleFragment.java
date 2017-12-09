@@ -27,9 +27,13 @@ public class ScheduleFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_schedule, container, false);
 
         TabLayout tabLayout = (TabLayout) v.findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("Monday"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tuesday"));
-        tabLayout.addTab(tabLayout.newTab().setText("Wednesday"));
+        tabLayout.addTab(tabLayout.newTab().setText("Mo"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tu"));
+        tabLayout.addTab(tabLayout.newTab().setText("We"));
+        tabLayout.addTab(tabLayout.newTab().setText("Th"));
+        tabLayout.addTab(tabLayout.newTab().setText("Fr"));
+        tabLayout.addTab(tabLayout.newTab().setText("Sa"));
+        tabLayout.addTab(tabLayout.newTab().setText("Su"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) v.findViewById(R.id.pager);
